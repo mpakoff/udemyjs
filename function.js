@@ -48,7 +48,7 @@ let tvelve = "12.4";                                //метод округле�
 
 console.log(Math.round(tvelve)); 
 
-let ten  = "10.4px";
+let ten  = "10.4px";                
 
-console.log(parseInt(ten));                         
-console.log(parseFloat(ten));
+console.log(parseInt(ten));                         //из значения только целое число
+console.log(parseFloat(ten));                       //откидывает px.
