@@ -22,7 +22,8 @@ git log - выдаёт всю инфу по коммитам кто и во ск
 
 идём в интернет на github.com, регаемся и создаём свой первый репозиторий. 
 
-git remote add origin https://github.com/mpakoff/udemyjs.git - добавляем удалённый репозиторий в наш локальный, то есть связываем его.
+git remote add origin https://github.com/mpakoff/udemyjs.git
+или git remote add origin git@bitbucket.org:mpakoff/react_minin.git    - добавляем удалённый репозиторий в наш локальный, то есть связываем его.
 
 git push -u origin master - отправляем наш локальный репозиторий с от'commit'чеными файлами на удалённый репозиторий в ветку master(основная ветка). ВНИМАНИЕ! при первом пуше запросят логин и пароль от гитхаба
 
