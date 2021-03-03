@@ -19,24 +19,32 @@ const personalMovieDB = {
 
 };
 
-function showMyDB() {
-    if (personalMovieDB.private == false) {
+// function showMyDB() {
+//     if (personalMovieDB.private == false) {
+//         console.log(personalMovieDB);
+//     } else {
+//         console.log("Access Denied!");
+//     }
+// }
+
+function showMyDB(hidden) { //вариант с передачей аргумента. hidden принимает true или false personalMovieDB.private
+    if (!hidden) {
         console.log(personalMovieDB);
-    } else {
-        console.log("Access Denied!");
     }
 }
 
+showMyDB(personalMovieDB.private)
+
 function writeYourGenres() {
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 1; i <= 3; i++) {
 
-        const arr = prompt('Ваш любимый жанр по номером ' + (i + 1), '');
+        const arr = prompt('Ваш любимый жанр по номером ' + i, ''); // или const arr = prompt(`Ваш любимый жанр по номером ${i} `, '');
 
         if (arr != null && arr != '' && arr.length < 50) {
-            personalMovieDB.genres[i] = arr;
+            personalMovieDB.genres[i - 1] = arr;
 
-            
+
         }
     }
     console.log(personalMovieDB.genres);
@@ -47,7 +55,7 @@ writeYourGenres();
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
 
-        let a = prompt('введите название фильма №' + (i + 1), ''),
+        let a = prompt('введите название фильма № ' + (i + 1), ''),
             b = prompt('На сколько вы оцение его?', '');
 
 
@@ -76,8 +84,3 @@ function detectPersonalLevel() {
     }
 }
 detectPersonalLevel();
-
-
-
-
-console.log(personalMovieDB);
