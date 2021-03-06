@@ -19,7 +19,11 @@ const option = {
 };
 option.makeTest();
 
-console.log(Object.keys(option).length); //показывает число свойств объекта, но не видит свойства вложенного объекта. без length выводит их название
+const { border, bg } = option.colors; // деструктуризация объекта
+
+console.log(border);
+
+// console.log(Object.keys(option).length); //показывает число свойств объекта, но не видит свойства вложенного объекта. без length выводит их название
 
 // console.log(option["colors"]["border"]); //доступ к вложенному значению свойства через двойные квадратные скобки
 
